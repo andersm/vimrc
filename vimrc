@@ -59,6 +59,7 @@ set t_vb=
 colorscheme darkblue
 
 set cursorline                      " highlight current line
+hi CursorLine cterm=NONE ctermbg=darkgrey
 set guicursor+=i:block-Cursor
 set guicursor+=a:blinkon0           " disable cursor blink
 set guicursor+=i:blinkon0
