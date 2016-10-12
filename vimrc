@@ -72,11 +72,15 @@ if has('gui_running')
     if has('gui_mac')
         set guifont=Inconsolata\ for\ Powerline:h13
     else
-        set guifont=Inconsolata\ for\ Powerline\ 13
+        set guifont=Inconsolata-dz\ for\ Powerline\ 11
     endif
 endif
 
 if has('gui_running')
     set lines=50 columns=100
 endif
+
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
