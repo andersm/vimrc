@@ -71,7 +71,7 @@ set sidescrolloff=5
 
 if has('gui_running')
     let g:airline_powerline_fonts=1
-    if has('gui_mac')
+    if (has('gui_mac') || has('gui_macvim'))
         set guifont=Inconsolata\ for\ Powerline:h13
     else
         set guifont=Inconsolata-dz\ for\ Powerline\ 11
