@@ -69,8 +69,8 @@ set guicursor+=i:blinkon0
 set scrolloff=1
 set sidescrolloff=5
 
+let g:airline_powerline_fonts=1
 if has('gui_running')
-    let g:airline_powerline_fonts=1
     if (has('gui_mac') || has('gui_macvim'))
         set guifont=Inconsolata\ for\ Powerline:h13
     else
