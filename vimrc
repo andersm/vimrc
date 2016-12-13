@@ -17,6 +17,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jreybert/vimagit'
 Plugin 'embear/vim-localvimrc'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +58,12 @@ let mapleader=","
 " no beeps!
 set visualbell
 set t_vb=
+
+" split navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
 
 "" Cosmetics
 colorscheme darkblue
