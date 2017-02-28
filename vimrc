@@ -77,6 +77,8 @@ set guicursor+=i:blinkon0
 set scrolloff=1
 set sidescrolloff=5
 
+set mouse=a
+
 let g:airline_powerline_fonts=1
 if has('gui_running')
     if (has('gui_mac') || has('gui_macvim'))
