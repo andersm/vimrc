@@ -18,6 +18,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'jreybert/vimagit'
 Plugin 'embear/vim-localvimrc'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jpalardy/vim-slime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -91,6 +92,13 @@ endif
 if has('gui_running')
     set lines=50 columns=100
 endif
+
+"" vim-slime
+let g:slime_target = "tmux"
+let g:slime_paste_file = "$HOME/.slime_paste"
+
+"" delimitMate
+au FileType lisp let b:delimitMate_quotes = "\" `"
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
