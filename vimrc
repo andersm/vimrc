@@ -19,6 +19,7 @@ Plugin 'jreybert/vimagit'
 Plugin 'embear/vim-localvimrc'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jpalardy/vim-slime'
+Plugin 'vivien/vim-linux-coding-style'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,6 +100,9 @@ let g:slime_paste_file = "$HOME/.slime_paste"
 
 "" delimitMate
 au FileType lisp let b:delimitMate_quotes = "\" `"
+
+"" vim-linux-coding-style
+let g:linuxsty_patterns = [ "linux-socfpga" ]
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
