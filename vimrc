@@ -21,6 +21,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jpalardy/vim-slime'
 Plugin 'vivien/vim-linux-coding-style'
 Plugin 'kergoth/vim-bitbake'
+Plugin 'qpkorr/vim-bufkill'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
