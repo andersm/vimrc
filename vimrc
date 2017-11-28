@@ -101,6 +101,9 @@ if has('gui_running')
     set lines=50 columns=100
 endif
 
+"" autocompletion
+set completeopt=longest,menuone
+
 "" vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = "$HOME/.slime_paste"
