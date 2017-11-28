@@ -60,11 +60,15 @@ set smartcase                       " ...unless they contain at least one capita
 
 let mapleader=","
 
-" no beeps!
+"" Filename tab completion
+set wildmode=longest,list,full
+set wildmenu
+
+"" no beeps!
 set visualbell
 set t_vb=
 
-" split navigation
+"" split navigation
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
