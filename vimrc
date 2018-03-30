@@ -23,6 +23,7 @@ Plugin 'vivien/vim-linux-coding-style'
 Plugin 'kergoth/vim-bitbake'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'ARM9/arm-syntax-vim'
+Plugin 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,10 +76,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 "" Cosmetics
-colorscheme darkblue
+set background=dark
+colorscheme solarized8
 
 set cursorline                      " highlight current line
-hi CursorLine cterm=NONE ctermbg=darkgrey
 set guicursor+=i:block-Cursor
 set guicursor+=a:blinkon0           " disable cursor blink
 set guicursor+=i:blinkon0
@@ -89,6 +90,8 @@ set sidescrolloff=5
 set mouse=a
 
 let g:airline_powerline_fonts=1
+let g:airline_solarized_bg='dark'
+let g:airline_theme='solarized'
 if has('gui_running')
     if (has('gui_mac') || has('gui_macvim'))
         set guifont=Inconsolata\ for\ Powerline:h13
