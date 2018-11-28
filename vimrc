@@ -1,28 +1,44 @@
 set nocompatible              " be iMproved, required
+filetype off                  " required
 
-packadd minpac
-call minpac#init()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('Valloric/YouCompleteMe')
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
-call minpac#add('Raimondi/delimitMate')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('jreybert/vimagit')
-call minpac#add('embear/vim-localvimrc')
-call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('qpkorr/vim-bufkill')
-call minpac#add('lifepillar/vim-solarized8')
-call minpac#add('jpalardy/vim-slime', {'type': 'opt'})
-call minpac#add('vivien/vim-linux-coding-style', {'type': 'opt'})
-call minpac#add('kergoth/vim-bitbake', {'type': 'opt'})
-call minpac#add('ARM9/arm-syntax-vim', {'type': 'opt'})
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-command! PackUpdate call minpac#update()
-command! PackClean call minpac#clean()
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jreybert/vimagit'
+Plugin 'embear/vim-localvimrc'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jpalardy/vim-slime'
+Plugin 'vivien/vim-linux-coding-style'
+Plugin 'kergoth/vim-bitbake'
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'ARM9/arm-syntax-vim'
+Plugin 'lifepillar/vim-solarized8'
 
-filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 syntax enable
 set encoding=utf-8
