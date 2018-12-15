@@ -24,6 +24,7 @@ Plugin 'kergoth/vim-bitbake'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'ARM9/arm-syntax-vim'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
