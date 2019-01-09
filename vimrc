@@ -125,3 +125,5 @@ set undodir=~/.vim/undo//
 "" Vimagit
 command! Hmagit call magit#show_magit('h')
 
+"" CtrlP
+nnoremap <c-s-p> :CtrlP .
