@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+source /usr/share/doc/fzf/examples/plugin/fzf.vim
+
+set rtp+='/usr/share/doc/fzf/examples/plugin/fzf.vim'
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -24,8 +28,8 @@ Plugin 'kergoth/vim-bitbake'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'ARM9/arm-syntax-vim'
 Plugin 'lifepillar/vim-solarized8'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'RRethy/vim-illuminate'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,5 +130,6 @@ set undodir=~/.vim/undo//
 "" Vimagit
 command! Hmagit call magit#show_magit('h')
 
-"" CtrlP
-nnoremap <c-s-p> :CtrlP .
+"" FZF
+command! Fzf call fzf#run({'source': 'rg --files', 'sink': 'e', 'down': '40%'})
+nnoremap <c-p> :Fzf<cr>
