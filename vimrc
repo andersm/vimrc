@@ -100,7 +100,7 @@ let g:airline_solarized_bg='dark'
 let g:airline_theme='solarized'
 if has('gui_running')
     if (has('gui_mac') || has('gui_macvim'))
-        set guifont=Inconsolata\ for\ Powerline:h13
+        set guifont=Inconsolata\ Nerd\ Font\ Mono:h13
     else
         set guifont=Inconsolata-dz\ for\ Powerline\ 11
     endif
