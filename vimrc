@@ -1,14 +1,18 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-source /usr/share/doc/fzf/examples/plugin/fzf.vim
-
-set rtp+='/usr/share/doc/fzf/examples/plugin/fzf.vim'
-
 let on_darwin = 0
 
 if toupper(substitute(system('uname'), '\n', '', '')) =~ 'DARWIN'
     let on_darwin = 1
+endif
+
+if on_darwin
+    source /opt/local/share/fzf/vim/plugin/fzf.vim
+    set rtp+='/opt/local/share/fzf/vim'
+else
+    source /usr/share/doc/fzf/examples/plugin/fzf.vim
+    set rtp+='/usr/share/doc/fzf/examples/plugin/fzf.vim'
 endif
 
 if on_darwin
