@@ -5,6 +5,38 @@ source /usr/share/doc/fzf/examples/plugin/fzf.vim
 
 set rtp+='/usr/share/doc/fzf/examples/plugin/fzf.vim'
 
+let on_darwin = 0
+
+if toupper(substitute(system('uname'), '\n', '', '')) =~ 'DARWIN'
+    let on_darwin = 1
+endif
+
+if on_darwin
+    \ && exists('+pythonhome')
+    \ && exists('+pythondll')
+    \ && exists('+pythonthreehome')
+    \ && exists('+pythonthreedll')
+    let python_path = '/opt/local/Library/Frameworks/Python.framework/Versions'
+    let &pythonhome = ''
+    let &pythondll  = ''
+    let &pythonthreehome = ''
+    let &pythonthreedll  = ''
+    for i in range(0, 11)
+        if filereadable(python_path . '/2.' . i . '/lib/libpython2.' . i . '.dylib')
+                    \ && &pythonhome == ''
+                    \ && &pythondll  == ''
+            let &pythonhome = python_path . '/2.' . i
+            let &pythondll  = python_path . '/2.' . i . '/lib/libpython2.' . i . '.dylib'
+        endif
+        if filereadable(python_path . '/3.' . i . '/lib/libpython3.' . i . '.dylib')
+                    \ && &pythonthreehome == ''
+                    \ && &pythonthreedll  == ''
+            let &pythonthreehome = python_path . '/3.' . i
+            let &pythonthreedll  = python_path . '/3.' . i . '/lib/libpython3.' . i . '.dylib'
+        endif
+    endfor
+endif
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
